@@ -1,12 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Button } from "primereact/button"
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import "./styles/app.scss";
 
 const App = () => {
   return (
     <div className="app">
+    <Button />
       <nav>
         <ul>
           <li>

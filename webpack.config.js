@@ -31,7 +31,7 @@ module.exports = {
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
@@ -44,6 +44,10 @@ module.exports = {
       {
         test: /\.less$/,
         loader: "less-loader", // compiles Less to CSS
+      },
+      {
+        test: /\.(png|gif|woff|woff2|eot|ttf|svg)$/,
+        loader: "url-loader?limit=100000"
       },
     ],
   },
