@@ -9,9 +9,10 @@ const fetchImages = (req: Request, res: Response) => {
   const breed: BreedJSON = {
     breed: req.params.qBreed,
     subbreed: req.params.qSubbreed,
-  }
+  };
   const breedService: BreedService = new BreedService();
-  breedService.fetchImages(breed)
+  breedService
+    .fetchImages(breed)
     .then((data: string[]) => {
       res.json(data);
     })
@@ -28,6 +29,5 @@ const fetchImages = (req: Request, res: Response) => {
 router.get("/:qBreed", fetchImages);
 //Get all images of a subbreed.
 router.get("/:qBreed/:qSubbreed", fetchImages);
-
 
 export default router;

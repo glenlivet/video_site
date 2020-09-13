@@ -1,8 +1,6 @@
-
 import { BreedEntity, BreedJSON } from "../models";
 
 class BreedListTransformer {
-
   static toBreedEntities(breedJSONs: BreedJSON[]): BreedEntity[] {
     const retVal: BreedEntity[] = [];
     const breedMap: Map<string, BreedJSON[]> = new Map();
@@ -24,8 +22,8 @@ class BreedListTransformer {
       let distinctSubs = [...new Set(subbreeds)];
       const breedEntity: BreedEntity = {
         name: key,
-        subbreeds: distinctSubs
-      }
+        subbreeds: distinctSubs,
+      };
       retVal.push(breedEntity);
     }
     return retVal;

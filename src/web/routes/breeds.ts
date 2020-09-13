@@ -8,7 +8,8 @@ const router = Router();
 //Get all breeds
 router.get("/", (req, res) => {
   const breedService: BreedService = new BreedService();
-  breedService.listAll()
+  breedService
+    .listAll()
     .then((data: BreedJSON[]) => {
       res.json(data);
     })
@@ -21,6 +22,5 @@ router.get("/", (req, res) => {
       res.sendStatus(503);
     });
 });
-
 
 export default router;

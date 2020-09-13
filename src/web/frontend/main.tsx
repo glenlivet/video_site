@@ -34,16 +34,16 @@ const App = () => {
         </Route>
       </Switch>
     </div>
-  )
+  );
 };
 
-const Home = () => (<h2>Home</h2>);
-const About = () => (<h2>About</h2>);
-const Users = () => (<h2>Users</h2>);
+const Home = () => <h2>Home</h2>;
+const About = () => <h2>About</h2>;
+const Users = () => <h2>Users</h2>;
 
 ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.getElementById("root"),
+  document.getElementById("root")
 );

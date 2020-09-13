@@ -1,4 +1,4 @@
 export interface ReturnMessage {
-  message: object,
-  status: string
+  message: object;
+  status: string;
 }

@@ -7,4 +7,4 @@ async function main() {
   console.log(`Server started at http://localhost:${SERVER_PORT}`);
 }
 
-main().catch(error => console.error(error));
+main().catch((error) => console.error(error));
