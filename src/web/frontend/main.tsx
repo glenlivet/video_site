@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import "./reset.css";
-import "./style.css";
+
+import "./styles/app.scss";
 
 const App = () => {
   return (
@@ -37,7 +37,12 @@ const App = () => {
   );
 };
 
-const Home = () => <h2>Home</h2>;
+const Home = () => {
+  return (
+    <div>
+    </div>
+  );
+};
 const About = () => <h2>About</h2>;
 const Users = () => <h2>Users</h2>;
 
